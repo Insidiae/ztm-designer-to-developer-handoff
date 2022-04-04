@@ -26,6 +26,8 @@ body {
   margin-bottom: 18px;
   font-size: 2rem; // 32px
   font-weight: 700;
+  line-height: 1;
+  letter-spacing: -1.71px;
 
   @include queries.respond-to(tablet-landscape-above) {
     font-size: 3rem; // 48px

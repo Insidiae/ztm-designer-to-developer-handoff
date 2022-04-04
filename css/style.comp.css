@@ -94,6 +94,8 @@ body {
   margin-bottom: 18px;
   font-size: 2rem;
   font-weight: 700;
+  line-height: 1;
+  letter-spacing: -1.71px;
 }
 @media (min-width: 65.625em) {
   .heading-secondary {
