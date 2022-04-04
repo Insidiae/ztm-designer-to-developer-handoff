@@ -1,0 +1,9 @@
+@use "../abstracts/queries";
+
+.row {
+  @include queries.respond-to(tablet-portrait-above) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

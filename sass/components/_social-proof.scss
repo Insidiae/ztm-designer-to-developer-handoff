@@ -1,8 +1,7 @@
+@use "../abstracts/queries";
+
 .social-proof {
   padding: 80px 0 100px;
-
-  // &__content {
-  // }
 
   &__description {
     margin-bottom: 40px;
@@ -83,6 +82,58 @@
     &__body {
       font-weight: 500;
       line-height: 1.69230769; // 22px / 13px
+    }
+  }
+
+  @include queries.respond-to(tablet-portrait-above) {
+    padding: 120px 0;
+
+    &__content {
+      width: 40%;
+    }
+
+    &__description {
+      margin: 0;
+    }
+
+    &__rating {
+      display: flex;
+      align-items: center;
+      width: 445px;
+      padding: 16px 32px;
+
+      &:nth-child(1) {
+        transform: translateX(-100px);
+      }
+
+      &:nth-child(2) {
+        transform: translateX(-50px);
+      }
+
+      &__body {
+        margin-top: 0;
+        margin-left: 32px;
+      }
+    }
+
+    &__reviews {
+      display: flex;
+      margin-top: 90px;
+    }
+
+    &__review {
+      &:not(:first-child) {
+        margin-top: 0;
+        margin-left: 30px;
+      }
+
+      &:nth-child(1) {
+        transform: translateY(-16px);
+      }
+
+      &:nth-child(3) {
+        transform: translateY(16px);
+      }
     }
   }
 }

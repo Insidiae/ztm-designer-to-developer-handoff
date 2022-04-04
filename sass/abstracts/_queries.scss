@@ -1,0 +1,38 @@
+// https://sass-guidelin.es/#responsive-web-design-and-breakpoints
+$breakpoints: (
+  "tablet-small-above": (
+    // 650px
+    min-width: 40.675em,
+  ),
+  "tablet-portrait-above": (
+    // 900px
+    min-width: 56.25em,
+  ),
+  "tablet-landscape-above": (
+    // 1050px
+    min-width: 65.625em,
+  ),
+);
+
+/// Responsive breakpoint manager
+/// @access public
+/// @param {String} $breakpoint - Breakpoint
+/// @requires $breakpoints
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == "string",
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. '
+         + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}

@@ -1,5 +1,15 @@
+@use "../abstracts/queries";
+
 .max-width-wrapper {
   width: 90%;
   max-width: 1110px;
   margin: 0 auto;
+
+  @include queries.respond-to(tablet-small-above) {
+    width: 70%;
+  }
+
+  @include queries.respond-to(tablet-portrait-above) {
+    width: 95%;
+  }
 }

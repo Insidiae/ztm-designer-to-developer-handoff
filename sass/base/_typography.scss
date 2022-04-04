@@ -1,3 +1,5 @@
+@use "../abstracts/queries";
+
 @font-face {
   font-family: "Spartan";
   font-style: normal;
@@ -14,10 +16,18 @@ body {
   font-family: "Spartan", sans-serif;
   text-align: center;
   font-size: 0.8125rem; // 13px
+
+  @include queries.respond-to(tablet-portrait-above) {
+    text-align: left;
+  }
 }
 
 .heading-secondary {
   margin-bottom: 18px;
   font-size: 2rem; // 32px
   font-weight: 700;
+
+  @include queries.respond-to(tablet-landscape-above) {
+    font-size: 3rem; // 48px
+  }
 }
