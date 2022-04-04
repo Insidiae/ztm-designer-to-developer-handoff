@@ -1,0 +1,248 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+:root {
+  --color-primary-dark-magenta: hsl(300deg 43% 22%);
+  --color-primary-soft-pink: hsl(333deg 80% 67%);
+  --color-neutral-dark-grayish-magenta: hsl(303deg 10% 53%);
+  --color-neutral-light-grayish-magenta: hsl(300deg 24% 96%);
+  --color-neutral-white: hsl(0deg 0% 100%);
+}
+
+body {
+  background-image: url(../images/bg-pattern-top-mobile.svg), url(../images/bg-pattern-bottom-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: 60%, 100%;
+  background-position: left top, right bottom;
+}
+@media (min-width: 56.25em) {
+  body {
+    background-image: url(../images/bg-pattern-top-desktop.svg), url(../images/bg-pattern-bottom-desktop.svg);
+    background-size: 40%, 75%;
+  }
+}
+
+@font-face {
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 300 900;
+  font-display: fallback;
+  src: url(../fonts/Spartan-optimized.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+body {
+  color: var(--color-primary-dark-magenta);
+  font-family: "Spartan", sans-serif;
+  text-align: center;
+  font-size: 0.8125rem;
+}
+@media (min-width: 56.25em) {
+  body {
+    text-align: left;
+  }
+}
+
+.heading-secondary {
+  margin-bottom: 18px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+@media (min-width: 65.625em) {
+  .heading-secondary {
+    font-size: 3rem;
+  }
+}
+
+.u-margin-bottom--sm {
+  margin-bottom: 16px !important;
+}
+.u-margin-bottom--md {
+  margin-bottom: 50px !important;
+}
+
+.max-width-wrapper {
+  width: 90%;
+  max-width: 1110px;
+  margin: 0 auto;
+}
+@media (min-width: 40.675em) {
+  .max-width-wrapper {
+    width: 70%;
+  }
+}
+@media (min-width: 56.25em) {
+  .max-width-wrapper {
+    width: 95%;
+  }
+}
+
+@media (min-width: 56.25em) {
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.social-proof {
+  padding: 80px 0 100px;
+}
+.social-proof__description {
+  margin-bottom: 40px;
+  color: var(--color-neutral-dark-grayish-magenta);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.66666667;
+  letter-spacing: -0.3px;
+}
+.social-proof__ratings {
+  list-style: none;
+  padding: 0;
+}
+.social-proof__rating {
+  padding: 16px;
+  border-radius: 8px;
+  background-color: var(--color-neutral-light-grayish-magenta);
+}
+.social-proof__rating:not(:first-child) {
+  margin-top: 16px;
+}
+.social-proof__rating__star {
+  display: inline-block;
+  margin: 0 2px;
+}
+.social-proof__rating__body {
+  display: inline-block;
+  margin-top: 16px;
+  font-weight: 700;
+}
+.social-proof__reviews {
+  list-style: none;
+  padding: 0;
+}
+.social-proof__review {
+  padding: 40px 32px 32px;
+  border-radius: 8px;
+  background-color: var(--color-primary-dark-magenta);
+  color: var(--color-neutral-white);
+  text-align: left;
+}
+.social-proof__review:not(:first-child) {
+  margin-top: 16px;
+}
+.social-proof__review__meta {
+  display: flex;
+  align-items: center;
+  margin-bottom: 26px;
+}
+.social-proof__review__profile-img {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-right: 23px;
+  border-radius: 50%;
+}
+.social-proof__review__name {
+  margin-bottom: 5px;
+  font-weight: 700;
+  line-height: 1;
+}
+.social-proof__review__verified {
+  color: var(--color-primary-soft-pink);
+  line-height: 1;
+}
+.social-proof__review__body {
+  font-weight: 500;
+  line-height: 1.69230769;
+}
+@media (min-width: 56.25em) {
+  .social-proof {
+    padding: 120px 0;
+  }
+  .social-proof__content {
+    width: 40%;
+  }
+  .social-proof__description {
+    margin: 0;
+  }
+  .social-proof__rating {
+    display: flex;
+    align-items: center;
+    width: 445px;
+    padding: 16px 32px;
+  }
+  .social-proof__rating:nth-child(1) {
+    transform: translateX(-100px);
+  }
+  .social-proof__rating:nth-child(2) {
+    transform: translateX(-50px);
+  }
+  .social-proof__rating__body {
+    margin-top: 0;
+    margin-left: 32px;
+  }
+  .social-proof__reviews {
+    display: flex;
+    margin-top: 90px;
+  }
+  .social-proof__review:not(:first-child) {
+    margin-top: 0;
+    margin-left: 30px;
+  }
+  .social-proof__review:nth-child(1) {
+    transform: translateY(-16px);
+  }
+  .social-proof__review:nth-child(3) {
+    transform: translateY(16px);
+  }
+}
+
+/*# sourceMappingURL=style.comp.css.map */
